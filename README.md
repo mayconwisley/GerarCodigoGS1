@@ -2,12 +2,19 @@
 
 Gerador de imagem Data Matrix (GS1) em .NET 10 usando `ZXing.Net` e `SkiaSharp`.
 
-Este projeto cria uma imagem PNG contendo um código Data Matrix a partir do conteúdo informado via linha de comando.
+Este projeto cria uma imagem PNG contendo um cï¿½digo Data Matrix a partir do conteï¿½do informado via linha de comando.
+
+## Download
+
+VocÃª pode baixar o executÃ¡vel compilado clicando no link abaixo:
+
+[Download do GerarCodigoGS1](hhttps://github.com/mayconwisley/GerarCodigoGS1/blob/master/Download/GerarCodigoGS1.7z)
+
 
 Arquivos principais:
-- `Program.cs` – entrada da aplicação e parsing de argumentos.
-- `DataMatrix.cs` – geração do Data Matrix e gravação em PNG.
-- `GerarCodigoGS1.csproj` – referência ao `.NET 10` e pacotes NuGet (`ZXing.Net`, `ZXing.Net.Bindings.SkiaSharp`).
+- `Program.cs` ï¿½ entrada da aplicaï¿½ï¿½o e parsing de argumentos.
+- `DataMatrix.cs` ï¿½ geraï¿½ï¿½o do Data Matrix e gravaï¿½ï¿½o em PNG.
+- `GerarCodigoGS1.csproj` ï¿½ referï¿½ncia ao `.NET 10` e pacotes NuGet (`ZXing.Net`, `ZXing.Net.Bindings.SkiaSharp`).
 
 Requisitos
 - .NET 10 SDK
@@ -24,30 +31,30 @@ Uso (linha de comando)
 Sintaxe:
 `dotnet run -- <conteudo> <caminho_de_saida> <nome_do_arquivo> [size]`
 
-Parâmetros:
-- `<conteudo>` (obrigatório) — texto ou dados que serão codificados no Data Matrix.
-- `<caminho_de_saida>` (obrigatório) — diretório onde o arquivo será salvo (deve existir).
-- `<nome_do_arquivo>` (obrigatório) — nome do arquivo (veja observação abaixo sobre extensão).
-- `[size]` (opcional) — tamanho em pixels (padrão: 300).
+Parï¿½metros:
+- `<conteudo>` (obrigatï¿½rio) ï¿½ texto ou dados que serï¿½o codificados no Data Matrix.
+- `<caminho_de_saida>` (obrigatï¿½rio) ï¿½ diretï¿½rio onde o arquivo serï¿½ salvo (deve existir).
+- `<nome_do_arquivo>` (obrigatï¿½rio) ï¿½ nome do arquivo (veja observaï¿½ï¿½o abaixo sobre extensï¿½o).
+- `[size]` (opcional) ï¿½ tamanho em pixels (padrï¿½o: 300).
 
 Exemplos
 - Usando `dotnet run`:
   - `dotnet run -- "010460123456789012" "C:\Temp" "meu_datamatrix" 400`
     - Gera `C:\Temp\meu_datamatrix.png` com 400x400 px.
 
-- Executando o binário gerado:
+- Executando o binï¿½rio gerado:
   - `GerarCodigoGS1.exe "010460123456789012" "C:\Temp" "meu_datamatrix" 300`
 
-Observações importantes
-- O programa valida se o `caminho_de_saida` existe. Se não existir, ele retornará erro.
-- O `Program.cs` acrescenta `.png` ao `nome_do_arquivo` automaticamente. Para evitar `nome.png.png`, forneça o nome do arquivo sem extensão (ex.: `meu_datamatrix`).
-- Se não informar `size`, o tamanho padrão é `300` (px).
+Observaï¿½ï¿½es importantes
+- O programa valida se o `caminho_de_saida` existe. Se nï¿½o existir, ele retornarï¿½ erro.
+- O `Program.cs` acrescenta `.png` ao `nome_do_arquivo` automaticamente. Para evitar `nome.png.png`, forneï¿½a o nome do arquivo sem extensï¿½o (ex.: `meu_datamatrix`).
+- Se nï¿½o informar `size`, o tamanho padrï¿½o ï¿½ `300` (px).
 
 Erros e mensagens
-- Mensagens de erro são exibidas no console (por exemplo, parâmetros inválidos ou caminho inexistente).
+- Mensagens de erro sï¿½o exibidas no console (por exemplo, parï¿½metros invï¿½lidos ou caminho inexistente).
 
-Licença
-- Projeto simples de exemplo; adapte conforme necessário para uso em produção.
+Licenï¿½a
+- Projeto simples de exemplo; adapte conforme necessï¿½rio para uso em produï¿½ï¿½o.
 
 Contato
-- Abra uma issue no repositório ou modifique diretamente o código para ajustar comportamentos (por exemplo, validação de extensão do arquivo).
+- Abra uma issue no repositï¿½rio ou modifique diretamente o cï¿½digo para ajustar comportamentos (por exemplo, validaï¿½ï¿½o de extensï¿½o do arquivo).
