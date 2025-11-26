@@ -8,7 +8,7 @@ Este projeto cria uma imagem PNG contendo um código Data Matrix a partir do con
 
 Você pode baixar o executável compilado clicando no link abaixo:
 
-[Download do GerarCodigoGS1](https://github.com/mayconwisley/GerarCodigoGS1/blob/master/Download/GerarCodigoGS1.7z)
+[Download do GerarCodigoGS1](https://github.com/mayconwisley/GerarCodigoGS1/raw/refs/heads/master/Download/GerarCodigoGS1.7z)
 
 Arquivos principais:
 - `Program.cs` – entrada da aplicação e parsing de argumentos.
