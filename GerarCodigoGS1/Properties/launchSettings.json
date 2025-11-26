@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GerarCodigoGS1": {
+      "commandName": "Project",
+      "commandLineArgs": "Hoje C:\\Temp\\Teste1  "
+    }
+  }
+}
