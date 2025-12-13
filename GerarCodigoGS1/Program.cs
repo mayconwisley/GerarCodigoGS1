@@ -8,7 +8,7 @@ try
         return;
     }
 
-    var nameDataMatrixDefault = $"{DateTime.Now:yyyy-MM-dd_HH:mm:ss}_datamatrix.png";
+    var nameDataMatrixDefault = $"{DateTime.Now:yyyy-MM-dd_HH:mm:ss}_datamatrix.jpg";
     var outputPathDefault = Path.Combine(AppContext.BaseDirectory);
 
     var content = args[0];
@@ -23,9 +23,9 @@ try
     if (string.IsNullOrWhiteSpace(fileName))
         throw new ArgumentException("Nome do arquivo inválido. Paramentro 3");
 
-    var size = args.Length > 3 ? int.Parse(args[3]) : 300;
+    var size = args.Length > 3 ? int.Parse(args[3]) : 400;
 
-    outputPath = Path.Combine(outputPath, $"{fileName}.png");
+    outputPath = Path.Combine(outputPath, $"{fileName}.jpg");
 
     DataMatrix.GerarDataMatrix(content, outputPath, size);
 }
@@ -44,6 +44,6 @@ static void ShowUsage()
 {
     Console.WriteLine("Gerar Codigo GS1 Data Matrix - Use:");
     Console.WriteLine("  <conteudo> <caminho de saida> <nome do arquivo> [size]    Criar a imagem Data Matrix");
-    Console.WriteLine("Por padrão o size é 300px");
+    Console.WriteLine("Por padrão o size é 400px");
     Console.ReadKey();
 }
