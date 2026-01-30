@@ -2,7 +2,7 @@
   "profiles": {
     "GerarCodigoGS1": {
       "commandName": "Project",
-      "commandLineArgs": "\"0130705031151936112308101723110110AP4364\" \"C:\\Temp\\Teste1\" \"dataMatrix_exe\""
+      "commandLineArgs": "\"]d2(01)03453120000011(17)120508(10)ABCD1234\" \"C:\\Temp\\Teste1\" \"GS1\""
     }
   }
 }
