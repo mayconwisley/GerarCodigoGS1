@@ -2,7 +2,7 @@
 
 Gerador de imagem Data Matrix (GS1) em .NET 10 usando `ZXing.Net` e `SkiaSharp`.
 
-Este projeto cria uma imagem PNG contendo um código Data Matrix a partir do conteúdo informado via linha de comando.
+Este projeto cria uma imagem JPG contendo um código Data Matrix a partir do conteúdo informado via linha de comando.
 
 ## Download
 
@@ -12,7 +12,7 @@ Você pode baixar o executável compilado clicando no link abaixo:
 
 Arquivos principais:
 - `Program.cs` – entrada da aplicação e parsing de argumentos.
-- `DataMatrix.cs` – geração do Data Matrix e gravação em PNG.
+- `DataMatrix.cs` – geração do Data Matrix e gravação em JPG.
 - `GerarCodigoGS1.csproj` – referência ao `.NET 10` e pacotes NuGet (`ZXing.Net`, `ZXing.Net.Bindings.SkiaSharp`).
 
 Requisitos
@@ -39,14 +39,14 @@ Parâmetros:
 Exemplos
 - Usando `dotnet run`:
   - `dotnet run -- "010460123456789012" "C:\Temp" "meu_datamatrix" 400`
-    - Gera `C:\Temp\meu_datamatrix.png` com 400x400 px.
+    - Gera `C:\Temp\meu_datamatrix.JPG` com 400x400 px.
 
 - Executando o binário gerado:
   - `GerarCodigoGS1.exe "010460123456789012" "C:\Temp" "meu_datamatrix" 300`
 
 Observações importantes
 - O programa valida se o `caminho_de_saida` existe. Se não existir, ele retornará erro.
-- O `Program.cs` acrescenta `.png` ao `nome_do_arquivo` automaticamente. Para evitar `nome.png.png`, forneça o nome do arquivo sem extensão (ex.: `meu_datamatrix`).
+- O `Program.cs` acrescenta `.JPG` ao `nome_do_arquivo` automaticamente. Para evitar `nome.JPG.JPG`, forneça o nome do arquivo sem extensão (ex.: `meu_datamatrix`).
 - Se não informar `size`, o tamanho padrão é `300` (px).
 
 Erros e mensagens

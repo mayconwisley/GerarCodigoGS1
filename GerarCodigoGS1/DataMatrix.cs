@@ -8,9 +8,14 @@ namespace GerarCodigoGS1;
 
 public static class DataMatrix
 {
-    public static void GerarDataMatrix(string content, string outputPath, int size = 300)
+    public static void GerarDataMatrix(string content, string outputPath, int size = 400)
     {
-        var gs1Content = $"{content}";
+        // FNC1 (ASCII 29)
+        char fnc1 = (char)0x1D;
+
+        // Inserir FNC1 ANTES dos AIs
+        string payload = fnc1 + content;
+
         var write = new BarcodeWriter
         {
             Format = BarcodeFormat.DATA_MATRIX,
@@ -18,13 +23,13 @@ public static class DataMatrix
             {
                 Width = size,
                 Height = size,
-                Margin = 1,
+                Margin = 2,
                 SymbolShape = SymbolShapeHint.FORCE_SQUARE,
                 GS1Format = true
             }
         };
 
-        var bitmap = write.Write(gs1Content);
+        var bitmap = write.Write(payload);
         using var image = SKImage.FromBitmap(bitmap);
         using var data = image.Encode(SKEncodedImageFormat.Png, 100);
         using var stream = File.OpenWrite(outputPath);
