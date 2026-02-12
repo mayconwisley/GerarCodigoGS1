@@ -31,7 +31,7 @@ public static class DataMatrix
 
         var bitmap = write.Write(payload);
         using var image = SKImage.FromBitmap(bitmap);
-        using var data = image.Encode(SKEncodedImageFormat.Png, 100);
+        using var data = image.Encode(SKEncodedImageFormat.Jpeg, 100);
         using var stream = File.OpenWrite(outputPath);
 
         data.SaveTo(stream);
